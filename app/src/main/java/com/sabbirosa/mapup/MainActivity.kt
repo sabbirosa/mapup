@@ -39,8 +39,8 @@ class MainActivity : ComponentActivity() {
             MapUpTheme {
                 val items = listOf(
                     NavigationItem(title = "Main Screen", route = Screens.MainScreen.route),
-                    NavigationItem(title = "Entity Form", route = Screens.EntityForm.route),
-                    NavigationItem(title = "Entity List", route = Screens.EntityList.route),
+                    NavigationItem(title = "Place Form", route = Screens.PlaceForm.route),
+                    NavigationItem(title = "Places", route = Screens.Places.route),
                 )
                 val drawerState = rememberDrawerState(DrawerValue.Closed)
                 val scope = rememberCoroutineScope()

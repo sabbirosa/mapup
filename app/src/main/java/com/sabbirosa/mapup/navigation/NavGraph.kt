@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.sabbirosa.mapup.screens.EntityForm
-import com.sabbirosa.mapup.screens.EntityList
+import com.sabbirosa.mapup.screens.PlaceForm
+import com.sabbirosa.mapup.screens.Places
 import com.sabbirosa.mapup.screens.MainScreen
 
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -24,12 +24,12 @@ fun setupNavGraph(
                 MainScreen(innerPadding = innerPadding)
             }
 
-            composable(Screens.EntityForm.route) {
-                EntityForm(innerPadding = innerPadding)
+            composable(Screens.PlaceForm.route) {
+                PlaceForm(innerPadding = innerPadding)
             }
 
-            composable(Screens.EntityList.route) {
-                EntityList(innerPadding = innerPadding)
+            composable(Screens.Places.route) {
+                Places(innerPadding = innerPadding)
             }
     }
 }
