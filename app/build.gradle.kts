@@ -1,9 +1,6 @@
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -52,6 +49,8 @@ android {
     }
 }
 
+
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -62,6 +61,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.okhttp)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -69,19 +70,23 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(libs.accompanist.permissions)
-    implementation(libs.androidx.material.icons.extended)
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.coil.compose)
 
-    implementation (libs.maps.compose.v2115)
-    implementation (libs.play.services.maps.v1810)
-    implementation (libs.play.services.location)
-    implementation (libs.android.maps.utils)
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
 
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-    implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
-    implementation(libs.coil.compose.v240)
+    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
+
+    implementation("androidx.compose.material:material-icons-extended:1.6.5")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
+
+    implementation("com.google.maps.android:maps-compose:5.0.4")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    implementation("com.github.CanHub:Android-Image-Cropper:4.0.0")
+
+
+
 }

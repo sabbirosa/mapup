@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+
     }
 }
 dependencyResolutionManagement {
@@ -16,8 +17,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven ( url= "https://www.jitpack.io" )
     }
 }
 
-rootProject.name = "MapUp"
+rootProject.name = "mapup"
 include(":app")
+ 
